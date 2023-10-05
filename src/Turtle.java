@@ -40,25 +40,10 @@
       * @param a commandline args
       */
      public static void main(String[] a)
-     {
-         Turtle bob = new Turtle();
-         bob.penColor("red");
-         bob.width(5);
-         bob.speed(2);
-         for(int i=0;i<200;i++)
-         {
-             bob.forward(i/50.);
-             bob.left(5);
-             if(i%10==0)
-                 bob.dot("orange");
-             if (i%3 == 0)
-                 bob.penColor("red");
-             else if (i%3 == 1)
-                 bob.penColor("orange");
-             else
-                 bob.penColor("yellow");
-         }
-         // bob.saveGCODE("test.gcode");
+     {   
+        
+         new Thread(new Boon()).start();
+         new Thread(new Max()).start();
      }
  
      private static ArrayList<Turtle> turtles;
